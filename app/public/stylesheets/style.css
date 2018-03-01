@@ -1,8 +1,18 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.footer-text {
+    text-align: center;
 }
 
-a {
-  color: #00B7FF;
+#team {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }

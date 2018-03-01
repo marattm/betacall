@@ -2,9 +2,41 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
+
+    <nav>
+      <div class="nav-wrapper blue">
+        <a href="/" class="brand-logo center">{{title}}</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a href="/dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a href="/translate">Translate</a>
+          </li>
+          <li>
+            <a href="/chat">Chat</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
     {{{body}}}
+    </main>
+
+    <footer class="page-footer blue">
+      <ul id="team">
+        <li> 2018 {{title}}</li>
+        <li> Marat Tulepbayev-Monnié</li>
+      </ul>
+    </footer>
+
   </body>
+
 </html>
