@@ -50,7 +50,11 @@ app.use(function(err, req, res, next) {
 });
 
 
-
+/**
+ * 
+ * CHAT-SERVER
+ * 
+ */
 
 // Port where we'll run the websocket server
 var webSocketsServerPort = 1337;
@@ -168,5 +172,7 @@ wsServer.on('request', function (request) {
   });
 
 });
+
+
 
 module.exports = app;

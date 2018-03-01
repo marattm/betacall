@@ -1,1 +1,6 @@
 # mediconf
+
+## start
+```
+npm start
+```
