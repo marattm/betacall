@@ -1,0 +1,116 @@
+#block {
+    border-style: solid;
+}
+
+#render_containner {
+    display: flex;
+    justify-content: center;
+}
+
+#renderer {
+    height: 500px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 1px;
+}
+
+#box {
+    width: 1000px;
+    min-height: 400px;
+}
+
+.userIO {
+    display: inline-block;
+    width: 100%;
+    /* border: 2px outset black; */
+    padding: 5px 10px;
+    vertical-align: top;
+    height: 300px;
+}
+
+.userIO textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 5px 10px;
+}
+
+/* .userIO {
+    width: 40%;
+    min-height: 100px;
+    border: 1px solid #848484;
+-webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+border-radius: 30px;
+    outline: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+} */
+
+#drop_translate_boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#drop2_translate_boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#translate_boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-text {
+    text-align: center;
+}
+
+#team {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+} */
+
+/* nav .brand-logo {
+    margin-left: 13%;
+} */
+
+#content {
+    padding: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow-y: scroll;
+    border: 1px solid #CCC;
+    margin-top: 10px;
+    height: 160px;
+}
+
+#input {
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    padding: 5px;
+    width: 400px;
+}
+
+#status {
+    width: 88px;
+    display: block;
+    float: left;
+    margin-top: 15px;
+}
