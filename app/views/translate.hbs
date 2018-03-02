@@ -1,1 +1,46 @@
-<h1 class="center">{{subtitle}}</h1>
+<head>
+    <link rel='stylesheet' href='/stylesheets/translate.css' />
+</head>
+
+
+
+
+<article class="container">
+
+
+    <header style="text-align: center;">
+    </header>
+
+    <section class="experiment center">
+
+        <blockquote id="blockquote" style="display: none;border-bottom: 0;margin: 0 13%;text-align: center;border-radius: 6px;border-style: solid;border-color: rgb(214, 210, 210);"></blockquote>
+
+        <section class="section-divider">
+            <h2>Convert From</h2>
+
+            <!--Get languages from google -->
+            <select id="convert-from"></select>
+
+            <textarea id="textarea-from"></textarea>
+
+            <section class="button-area">
+                <button id="btn-convert-text" class="btn " style="font-size: 16px;">Convert Your Text Input</button>
+            
+                <button id="btn-convert-voice" class="btn " style="font-size: 16px;">Speak &amp; Convert Your Voice</button>
+            </section>
+        </section>
+
+        <section class="section-divider">
+            <h2>Convert Into</h2>
+            
+            <!--Get languages from google -->
+            <select id="convert-into"></select>
+
+            <textarea id="textarea-to" disabled style="background: #f9f9f9!important;border: 1px solid #f7f1f1;cursor: not-allowed;"
+                title="Output! ReadOnly!"></textarea>
+        </section>
+
+    </section>
+
+    
+</article>
