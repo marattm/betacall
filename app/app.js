@@ -175,6 +175,12 @@ wsServer.on('request', function (request) {
 });
 
 
+/**
+ * 
+ * AJAX - retrieving the data speech to text from the client side
+ * 
+ */
+
 
 /**
  * 
