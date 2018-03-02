@@ -11,6 +11,7 @@ var dashboard = require('./routes/dashboard');
 var translate = require('./routes/translate');
 var chat = require('./routes/chat');
 
+
 var app = express();
 
 // view engine setup
@@ -91,7 +92,7 @@ var server = http.createServer(function (request, response) {
   // Not important for us. We're writing WebSocket server, not HTTP server
 });
 server.listen(webSocketsServerPort, function () {
-  console.log((new Date()) + " Server is listening on port " + webSocketsServerPort);
+  console.log((new Date()) + " Chat server is listening on port " + webSocketsServerPort);
 });
 
 /**
@@ -172,6 +173,23 @@ wsServer.on('request', function (request) {
   });
 
 });
+
+
+
+/**
+ * 
+ * TRANSLATOR
+ * 
+ */
+
+
+ /**
+ * 
+ * VIDEO
+ * 
+ */
+
+
 
 
 
