@@ -1,5 +1,7 @@
 var recognition;
 
+// /!\ DISCLAIMER /!\ only work on Chrome
+// function that start the speech transcription
 function initTranscript(callback, language) {
     if (recognition) recognition.stop();
 
@@ -29,7 +31,6 @@ function initTranscript(callback, language) {
         if (recognition.dontReTry === true) {
             return;
         }
-
         initTranscript(callback, language);
     };
 
@@ -49,7 +50,22 @@ function initTranscript(callback, language) {
 }
 
 
+// binding function to the button v1
+document.getElementById('btn-convert-voice').onclick = function () {
+    this.disabled = true;
+    this.innerHTML = 'Start Speaking!';
 
+    initTranscript(function (text) {
+        var textareaFrom = document.getElementById('textarea-from'); //input
+        var temporaryText = "";
+        temporaryText += text; // here it writes the voice, and variable
+        textareaFrom.value = temporaryText;
+    }, 'en-US');
+};
+
+// ----------------------------
+
+// binding function to the button v2
 document.getElementById('btn-convert-voice').onclick = function () {
     this.disabled = true;
     this.innerHTML = 'Start Speaking!';
@@ -59,6 +75,64 @@ document.getElementById('btn-convert-voice').onclick = function () {
         var temporaryText = "";
         temporaryText += text; // here it writes the voice, and variable
         textareaFrom.value = temporaryText;
-
-        }, 'en-US');
+        submit_text()
+        }, 
+    
+        'en-US');
 };
+
+// binding function to the button v2 - still
+//SEND TEXT -> SERVER
+
+var submit_text = function (e) {
+    $.getJSON('/speechToText', {   // request
+        text: document.getElementById('textarea-from').value
+    }, function (data) {        // response
+        $('#saved').text(data);
+    });
+    return false;
+};
+
+
+// ----------------------------
+
+/*
+// binding function to the button v3
+document.getElementById('btn-convert-voice').onclick = function () {
+    this.disabled = true;
+    this.innerHTML = 'Start Speaking!';
+
+    initTranscript(function (text) {
+        var textareaFrom = document.getElementById('textarea-from'); //input
+        var temporaryText = "";
+        temporaryText += text; // here it writes the voice, and variable
+        textareaFrom.value = temporaryText;
+    }, 'en-US');
+};
+
+//SEND TEXT -> SERVER
+$(function () {
+    var submit_form = function (e) {
+        $.getJSON('/speechToText', {   // request
+            text: initTranscript.... // a continuer de cette maniere, on embed la fonction de transcript dans la finction ajax
+        }, function (data) {        // response
+            $('#saved').text(data);
+            $('input[name=name]').focus().select();
+        });
+        return false;
+    };
+
+    // binding
+    $('a#submit_score').bind('click', submit_form);
+
+    $('input[type=text]').bind('keydown', function (e) {
+        if (e.keyCode == 13) {
+            submit_form(e);
+        }
+    });
+
+    // autofocus on the form
+    $('input[name=a]').focus();
+});
+
+*/

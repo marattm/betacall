@@ -10,7 +10,8 @@ var users = require('./routes/users');
 var dashboard = require('./routes/dashboard');
 var translate = require('./routes/translate');
 var chat = require('./routes/chat');
-
+var savescore = require('./ajax/savescore');
+var speechToText = require('./ajax/speechToText')
 
 var app = express();
 
@@ -26,11 +27,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+/**
+ * ROUTING
+ */
 app.use('/', index);
 app.use('/users', users);
 app.use('/dashboard', dashboard);
 app.use('/translate', translate);
 app.use('/chat', chat);
+
+/**
+ * AJAX
+ */
+app.use('/savescore', savescore);
+app.use('/speechToText', speechToText)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -175,11 +186,9 @@ wsServer.on('request', function (request) {
 });
 
 
-/**
- * 
- * AJAX - retrieving the data speech to text from the client side
- * 
- */
+
+
+
 
 
 /**
