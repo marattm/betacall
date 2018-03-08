@@ -9,6 +9,7 @@ npm start
 
 * [ ] SpeechRecognition
     * [x] SpeechRecognition basic implementation
-    * [ ] Ajax for SpeechRecognition text
+    * [x] Ajax for SpeechRecognition text
+    * [ ] Set a chat between the two users
 * [ ] Translator
 * [ ] Video
