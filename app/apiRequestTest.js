@@ -1,7 +1,14 @@
 var unirest = require('unirest');
 
-unirest.post("https://translate.google.com/#fr/en/bonjour%20monsieur")
+var query = "where%20are%20my%20sunglasses";
+var targetLang = "fr";
+var sourceLang = "en";
+unirest.get(
+    "https://google-translate-proxy.herokuapp.com/api/translate?"
+    + "query=" + query 
+    + "&targetLang=" + targetLang 
+    + "&sourceLang=" + sourceLang)
     .end(function (result) {
-        console.log(result.status, result.headers, result.body);
+        console.log(result.body.extract.translation); //, result.headers, result.body
     });
 
