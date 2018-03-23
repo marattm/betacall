@@ -17,7 +17,7 @@ npm start
     * [ ] Add session storage
     * [ ] Improve 
 * [ ] Translation
-    * [x] Implement a fisrt translation API from https://github.com/marattm/google-translate-server (indirect Google tranlation APIs)
+    * [x] Implement a fisrt translation API from https://github.com/marattm/google-translate-server (indirect Google translation APIs use)
     * [ ] Implement Google translation APIs
 * [ ] Call
-    * [ ] Implement a basic video calling
+    * [ ] Implement a basic video calling with agora.io
