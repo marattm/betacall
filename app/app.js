@@ -160,7 +160,7 @@ wsServer.on('request', function (request) {
           color: userColor
         };
         history.push(obj);
-        history = history.slice(-100);
+        history = history.slice(-100); // show the 100 last messages
 
         // broadcast message to all connected clients
         var json = JSON.stringify({ type: 'message', data: obj });
@@ -188,16 +188,6 @@ wsServer.on('request', function (request) {
 
 
 
-
-
-
-/**
- * 
- * TRANSLATOR
- * 
- */
-
-
  /**
  * 
  * VIDEO
@@ -205,7 +195,6 @@ wsServer.on('request', function (request) {
  */
 
 
-
-
+ 
 
 module.exports = app;

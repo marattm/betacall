@@ -26,7 +26,7 @@ $(function () {
     }
 
     // open connection
-    var connection = new WebSocket('wss://70fa7691.ngrok.io');
+    var connection = new WebSocket('wss://eb512595.ngrok.io');
 
     connection.onopen = function () {
         // first we want users to enter their names
@@ -46,7 +46,7 @@ $(function () {
     connection.onmessage = function (message) {
         // try to parse JSON message. Because we know that the server always returns
         // JSON this should work without any problem but we should make sure that
-        // the massage is not chunked or otherwise damaged.
+        // the message is not chunked or otherwise damaged.
         try {
             var json = JSON.parse(message.data);
         } catch (e) {
@@ -99,6 +99,7 @@ $(function () {
         }
     });
 
+    
     /**
      * This method is optional. If the server wasn't able to respond to the
      * in 3 seconds then show some error message to notify the user that
